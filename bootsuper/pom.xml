@@ -1,0 +1,73 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cn.wlh.boot.complier</groupId>
+	<artifactId>bootsuper</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>all super</name>
+	<description>父类</description>  
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.3.RELEASE</version>
+		<relativePath />
+	</parent>
+	<!-- lookup parent from repository -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<freemarker.version>2.3.23</freemarker.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<wlh.util>0.0.1-SNAPSHOT</wlh.util>
+		<commons-io.dom4j.version>2.6</commons-io.dom4j.version>
+	</properties>
+
+	<!-- - - - -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.dom4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+	<!-- - - - -->
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>${freemarker.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>${dom4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cn.wlh</groupId>
+				<artifactId>util-base</artifactId>
+				<version>${wlh.util}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<!-- - - - -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

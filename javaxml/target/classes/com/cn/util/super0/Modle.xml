@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<heder>
+	<script>.../.../XX.js</script><!-- 自己写的核心,数据双向绑定。 -->
+</heder>
+<body>
+	<form property="select-key" action="/txn999999">
+		${tableInner}
+	</form>
+	<form property="record" action="/txn999900">
+		${__record}
+	</form>
+</body>
+</html>

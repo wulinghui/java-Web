@@ -1,0 +1,368 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x56cdc484, pid=4772, tid=0x000016f0
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_161-b12) (build 1.8.0_161-b12)
+# Java VM: Java HotSpot(TM) Client VM (25.161-b12 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x4c484]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0125e000):  JavaThread "main" [_thread_in_vm, id=5872, stack(0x01180000,0x011d0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xde657eae
+
+Registers:
+EAX=0x01aac230, EBX=0x00000002, ECX=0x000009bc, EDX=0xdcbfd0b8
+ESP=0x011cd014, EBP=0x011cd024, ESI=0xde657eae, EDI=0x00000019
+EIP=0x56cdc484, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x011cd014)
+0x011cd014:   00000019 dcbfd0b8 143aa210 01aa92d8
+0x011cd024:   011cd048 56cdc53c 000009bc 143aa210
+0x011cd034:   00000019 dcbfd0b8 011cd65c 0000002c
+0x011cd044:   00000019 011cd12c 56cc3a97 143aa210
+0x011cd054:   00000019 011cd07c 011cd65c 0125e000
+0x011cd064:   140afbb8 011cd10c 011cd0b4 00000002
+0x011cd074:   00000000 143abc48 dcbfd0b8 00000005
+0x011cd084:   143a9ff0 143aa115 143aa156 143aa176 
+
+Instructions: (pc=0x56cdc484)
+0x56cdc464:   8b 41 04 53 89 4d fc 8b 4d 08 56 8b 34 88 8d 04
+0x56cdc474:   88 33 db 57 85 f6 74 46 8d 64 24 00 8b 55 14 43
+0x56cdc484:   39 16 75 16 8b 45 10 8b 4d 0c 8b 7e 08 50 51 8b
+0x56cdc494:   cf e8 36 84 08 00 84 c0 75 2f 8b 76 04 83 e6 fe 
+
+
+Register to memory mapping:
+
+EAX=0x01aac230 is an unknown value
+EBX=0x00000002 is an unknown value
+ECX=0x000009bc is an unknown value
+EDX=0xdcbfd0b8 is an unknown value
+ESP=0x011cd014 is pointing into the stack for thread: 0x0125e000
+EBP=0x011cd024 is pointing into the stack for thread: 0x0125e000
+ESI=0xde657eae is an unknown value
+EDI=0x00000019 is an unknown value
+
+
+Stack: [0x01180000,0x011d0000],  sp=0x011cd014,  free space=308k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x4c484]
+V  [jvm.dll+0x4c53c]
+V  [jvm.dll+0x33a97]
+V  [jvm.dll+0x33db3]
+V  [jvm.dll+0x39be5]
+V  [jvm.dll+0x3ba36]
+V  [jvm.dll+0x50b1f]
+V  [jvm.dll+0x511ea]
+V  [jvm.dll+0x52430]
+V  [jvm.dll+0x4eeba]
+V  [jvm.dll+0x3a057]
+V  [jvm.dll+0x3ba36]
+V  [jvm.dll+0x50b1f]
+V  [jvm.dll+0x511ea]
+V  [jvm.dll+0x52430]
+V  [jvm.dll+0x5247a]
+V  [jvm.dll+0xad6a8]
+V  [jvm.dll+0x81392]
+V  [jvm.dll+0xae146]
+V  [jvm.dll+0x857bc]
+V  [jvm.dll+0x86852]
+V  [jvm.dll+0x81db7]
+j  sun.util.resources.LocaleData$1.run()Ljava/util/ResourceBundle;+8
+j  sun.util.resources.LocaleData$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15b6d5]
+V  [jvm.dll+0x22229e]
+V  [jvm.dll+0x15b76e]
+V  [jvm.dll+0x10b83f]
+C  [java.dll+0x1015]
+j  sun.util.resources.LocaleData.getBundle(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;+9
+j  sun.util.resources.LocaleData.getCalendarData(Ljava/util/Locale;)Ljava/util/ResourceBundle;+26
+j  sun.util.locale.provider.LocaleResources.getCalendarData(Ljava/lang/String;)I+65
+j  sun.util.locale.provider.CalendarDataProviderImpl.getFirstDayOfWeek(Ljava/util/Locale;)I+13
+j  sun.util.locale.provider.CalendarDataUtility$CalendarWeekParameterGetter.getObject(Ljava/util/spi/CalendarDataProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Integer;+114
+j  sun.util.locale.provider.CalendarDataUtility$CalendarWeekParameterGetter.getObject(Ljava/util/spi/LocaleServiceProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+9
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObjectImpl(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;ZLjava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+40
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObject(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+7
+j  sun.util.locale.provider.CalendarDataUtility.retrieveFirstDayOfWeek(Ljava/util/Locale;)I+17
+j  java.util.Calendar.setWeekCountData(Ljava/util/Locale;)V+24
+j  java.util.Calendar.<init>(Ljava/util/TimeZone;Ljava/util/Locale;)V+55
+j  java.util.GregorianCalendar.<init>(Ljava/util/TimeZone;Ljava/util/Locale;)V+3
+j  java.util.GregorianCalendar.<init>()V+10
+j  org.apache.log4j.RollingCalendar.<init>()V+1
+j  org.apache.log4j.DailyRollingFileAppender.<init>()V+35
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15b6d5]
+V  [jvm.dll+0x22229e]
+V  [jvm.dll+0x15b76e]
+V  [jvm.dll+0x168078]
+V  [jvm.dll+0x168421]
+V  [jvm.dll+0x104758]
+C  [java.dll+0x3bf7]
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+85
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+79
+j  java.lang.Class.newInstance()Ljava/lang/Object;+138
+j  org.apache.log4j.helpers.OptionConverter.instantiateByClassName(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;+161
+j  org.apache.log4j.helpers.OptionConverter.instantiateByKey(Ljava/util/Properties;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;+43
+j  org.apache.log4j.PropertyConfigurator.parseAppender(Ljava/util/Properties;Ljava/lang/String;)Lorg/apache/log4j/Appender;+107
+j  org.apache.log4j.PropertyConfigurator.parseCategory(Ljava/util/Properties;Lorg/apache/log4j/Logger;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V+280
+j  org.apache.log4j.PropertyConfigurator.configureRootCategory(Ljava/util/Properties;Lorg/apache/log4j/spi/LoggerRepository;)V+63
+j  org.apache.log4j.PropertyConfigurator.doConfigure(Ljava/util/Properties;Lorg/apache/log4j/spi/LoggerRepository;)V+134
+j  org.apache.log4j.PropertyConfigurator.doConfigure(Ljava/net/URL;Lorg/apache/log4j/spi/LoggerRepository;)V+246
+j  org.apache.log4j.helpers.OptionConverter.selectAndConfigure(Ljava/net/URL;Ljava/lang/String;Lorg/apache/log4j/spi/LoggerRepository;)V+129
+j  org.apache.log4j.LogManager.<clinit>()V+156
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15b6d5]
+V  [jvm.dll+0x22229e]
+V  [jvm.dll+0x15b76e]
+V  [jvm.dll+0xc095a]
+V  [jvm.dll+0xc1b0a]
+V  [jvm.dll+0xc1c58]
+V  [jvm.dll+0x85856]
+V  [jvm.dll+0x86852]
+V  [jvm.dll+0x81db7]
+j  org.slf4j.impl.Log4jLoggerFactory.getLogger(Ljava/lang/String;)Lorg/slf4j/Logger;+37
+j  org.slf4j.LoggerFactory.getLogger(Ljava/lang/String;)Lorg/slf4j/Logger;+6
+j  org.slf4j.LoggerFactory.getLogger(Ljava/lang/Class;)Lorg/slf4j/Logger;+4
+j  cn.wlh.util.base.Logger.getLogger(Ljava/lang/Class;)Lcn/wlh/util/base/Logger;+5
+j  cn.wlh.util.base.RecordNewOfLog.<clinit>()V+2
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15b6d5]
+V  [jvm.dll+0x22229e]
+V  [jvm.dll+0x15b76e]
+V  [jvm.dll+0xc095a]
+V  [jvm.dll+0xc1b0a]
+V  [jvm.dll+0xc1c58]
+V  [jvm.dll+0xc1a35]
+V  [jvm.dll+0xc1c58]
+V  [jvm.dll+0xc1a35]
+V  [jvm.dll+0xc1c58]
+V  [jvm.dll+0xc1a35]
+V  [jvm.dll+0xc1c58]
+V  [jvm.dll+0x81611]
+j  cn.wlh.framework.ioc.factory.VersionFactoryTest0.main([Ljava/lang/String;)V+0
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15b6d5]
+V  [jvm.dll+0x22229e]
+V  [jvm.dll+0x15b76e]
+...<more frames>...
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.util.resources.LocaleData$1.run()Ljava/util/ResourceBundle;+8
+j  sun.util.resources.LocaleData$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;+0
+j  sun.util.resources.LocaleData.getBundle(Ljava/lang/String;Ljava/util/Locale;)Ljava/util/ResourceBundle;+9
+j  sun.util.resources.LocaleData.getCalendarData(Ljava/util/Locale;)Ljava/util/ResourceBundle;+26
+j  sun.util.locale.provider.LocaleResources.getCalendarData(Ljava/lang/String;)I+65
+j  sun.util.locale.provider.CalendarDataProviderImpl.getFirstDayOfWeek(Ljava/util/Locale;)I+13
+j  sun.util.locale.provider.CalendarDataUtility$CalendarWeekParameterGetter.getObject(Ljava/util/spi/CalendarDataProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Integer;+114
+j  sun.util.locale.provider.CalendarDataUtility$CalendarWeekParameterGetter.getObject(Ljava/util/spi/LocaleServiceProvider;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+9
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObjectImpl(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;ZLjava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+40
+j  sun.util.locale.provider.LocaleServiceProviderPool.getLocalizedObject(Lsun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter;Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;+7
+j  sun.util.locale.provider.CalendarDataUtility.retrieveFirstDayOfWeek(Ljava/util/Locale;)I+17
+j  java.util.Calendar.setWeekCountData(Ljava/util/Locale;)V+24
+j  java.util.Calendar.<init>(Ljava/util/TimeZone;Ljava/util/Locale;)V+55
+j  java.util.GregorianCalendar.<init>(Ljava/util/TimeZone;Ljava/util/Locale;)V+3
+j  java.util.GregorianCalendar.<init>()V+10
+j  org.apache.log4j.RollingCalendar.<init>()V+1
+j  org.apache.log4j.DailyRollingFileAppender.<init>()V+35
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+85
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+79
+j  java.lang.Class.newInstance()Ljava/lang/Object;+138
+j  org.apache.log4j.helpers.OptionConverter.instantiateByClassName(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;+161
+j  org.apache.log4j.helpers.OptionConverter.instantiateByKey(Ljava/util/Properties;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;+43
+j  org.apache.log4j.PropertyConfigurator.parseAppender(Ljava/util/Properties;Ljava/lang/String;)Lorg/apache/log4j/Appender;+107
+j  org.apache.log4j.PropertyConfigurator.parseCategory(Ljava/util/Properties;Lorg/apache/log4j/Logger;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V+280
+j  org.apache.log4j.PropertyConfigurator.configureRootCategory(Ljava/util/Properties;Lorg/apache/log4j/spi/LoggerRepository;)V+63
+j  org.apache.log4j.PropertyConfigurator.doConfigure(Ljava/util/Properties;Lorg/apache/log4j/spi/LoggerRepository;)V+134
+j  org.apache.log4j.PropertyConfigurator.doConfigure(Ljava/net/URL;Lorg/apache/log4j/spi/LoggerRepository;)V+246
+j  org.apache.log4j.helpers.OptionConverter.selectAndConfigure(Ljava/net/URL;Ljava/lang/String;Lorg/apache/log4j/spi/LoggerRepository;)V+129
+j  org.apache.log4j.LogManager.<clinit>()V+156
+v  ~StubRoutines::call_stub
+j  org.slf4j.impl.Log4jLoggerFactory.getLogger(Ljava/lang/String;)Lorg/slf4j/Logger;+37
+j  org.slf4j.LoggerFactory.getLogger(Ljava/lang/String;)Lorg/slf4j/Logger;+6
+j  org.slf4j.LoggerFactory.getLogger(Ljava/lang/Class;)Lorg/slf4j/Logger;+4
+j  cn.wlh.util.base.Logger.getLogger(Ljava/lang/Class;)Lcn/wlh/util/base/Logger;+5
+j  cn.wlh.util.base.RecordNewOfLog.<clinit>()V+2
+v  ~StubRoutines::call_stub
+j  cn.wlh.framework.ioc.factory.VersionFactoryTest0.main([Ljava/lang/String;)V+0
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x142f7400 JavaThread "Service Thread" daemon [_thread_blocked, id=2364, stack(0x03cc0000,0x03d10000)]
+  0x142d5800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5408, stack(0x14780000,0x147d0000)]
+  0x142cf000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=2436, stack(0x148a0000,0x148f0000)]
+  0x142cd400 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=5744, stack(0x14680000,0x146d0000)]
+  0x142c9800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=1736, stack(0x14800000,0x14850000)]
+  0x142b2400 JavaThread "Attach Listener" daemon [_thread_blocked, id=2780, stack(0x03d70000,0x03dc0000)]
+  0x142c6400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1992, stack(0x14510000,0x14560000)]
+  0x1429d000 JavaThread "Finalizer" daemon [_thread_blocked, id=2916, stack(0x01270000,0x012c0000)]
+  0x14277000 JavaThread "Reference Handler" daemon [_thread_blocked, id=4992, stack(0x144a0000,0x144f0000)]
+=>0x0125e000 JavaThread "main" [_thread_in_vm, id=5872, stack(0x01180000,0x011d0000)]
+
+Other Threads:
+  0x1426ec00 VMThread [stack: 0x01ba0000,0x01bf0000] [id=2476]
+  0x14308800 WatcherThread [stack: 0x14a20000,0x14a70000] [id=3276]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 3865K [0x03e00000, 0x04350000, 0x09350000)
+  eden space 4416K,  87% used [0x03e00000, 0x041c6410, 0x04250000)
+  from space 512K,   0% used [0x04250000, 0x04250000, 0x042d0000)
+  to   space 512K,   0% used [0x042d0000, 0x042d0000, 0x04350000)
+ tenured generation   total 10944K, used 0K [0x09350000, 0x09e00000, 0x13e00000)
+   the space 10944K,   0% used [0x09350000, 0x09350000, 0x09350200, 0x09e00000)
+ Metaspace       used 2744K, capacity 2768K, committed 2880K, reserved 4480K
+
+Card table byte_map: [0x012f0000,0x01380000] byte_map_base: 0x012d1000
+
+Polling page: 0x00170000
+
+CodeCache: size=32768Kb used=897Kb max_used=897Kb free=31870Kb
+ bounds [0x01cc0000, 0x01da8000, 0x03cc0000]
+ total_blobs=209 nmethods=76 adapters=72
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.948 Thread 0x142d5800   72             java.io.BufferedInputStream::getBufIfOpen (21 bytes)
+Event: 0.948 Thread 0x142d5800 nmethod 72 0x01d9e888 code [0x01d9e990, 0x01d9ea8c]
+Event: 0.949 Thread 0x142d5800   73  s          java.io.BufferedInputStream::read (49 bytes)
+Event: 0.950 Thread 0x142d5800 nmethod 73 0x01d9eb48 code [0x01d9ec70, 0x01d9ef68]
+Event: 0.950 Thread 0x142d5800   74             java.io.DataInputStream::readFully (63 bytes)
+Event: 0.950 Thread 0x142d5800 nmethod 74 0x01d9f108 code [0x01d9f240, 0x01d9f404]
+Event: 0.954 Thread 0x142d5800   75             java.io.DataInputStream::readShort (40 bytes)
+Event: 0.954 Thread 0x142d5800 nmethod 75 0x01d9f5c8 code [0x01d9f6f0, 0x01d9f834]
+Event: 0.955 Thread 0x142d5800   76             java.util.HashMap::resize (359 bytes)
+Event: 0.956 Thread 0x142d5800 nmethod 76 0x01d9f948 code [0x01d9fab0, 0x01da00fc]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.754 Thread 0x0125e000 Exception <a 'java/security/PrivilegedActionException'> (0x03f80d48) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.895 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/PatternLayoutBeanInfo> (0x0412ce40) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.896 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/LayoutBeanInfo> (0x04133fc0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.897 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectBeanInfo> (0x041376b0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.898 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectCustomizer> (0x0413aff8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.903 Thread 0x0125e000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 18> (0x0413d2a0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.905 Thread 0x0125e000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 22> (0x04140088) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.907 Thread 0x0125e000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 160> (0x04142128) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.916 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/LayoutCustomizer> (0x0414b4d0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.923 Thread 0x0125e000 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/PatternLayoutCustomizer> (0x04162e68) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u161\10277\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+
+Events (10 events):
+Event: 0.971 loading class sun/util/locale/provider/LocaleServiceProviderPool$LocalizedObjectGetter done
+Event: 0.971 loading class sun/util/locale/provider/CalendarDataUtility$CalendarWeekParameterGetter done
+Event: 0.971 loading class sun/util/locale/provider/LocaleResources
+Event: 0.972 loading class sun/util/locale/provider/LocaleResources done
+Event: 0.972 loading class sun/util/resources/LocaleData
+Event: 0.972 loading class sun/util/resources/LocaleData done
+Event: 0.972 loading class sun/util/resources/LocaleData$1
+Event: 0.972 loading class sun/util/resources/LocaleData$1 done
+Event: 0.972 loading class sun/util/resources/LocaleData$LocaleDataResourceBundleControl
+Event: 0.972 loading class java/util/ResourceBundle$Control
+
+
+Dynamic libraries:
+0x01380000 - 0x013b3000 	C:\Program Files\Java\jdk1.8.0_161\bin\javaw.exe
+0x774a0000 - 0x775dd000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75b40000 - 0x75c14000 	C:\Windows\system32\kernel32.dll
+0x756c0000 - 0x7570a000 	C:\Windows\system32\KERNELBASE.dll
+0x76bc0000 - 0x76c60000 	C:\Windows\system32\ADVAPI32.dll
+0x769f0000 - 0x76a9c000 	C:\Windows\system32\msvcrt.dll
+0x77620000 - 0x77639000 	C:\Windows\SYSTEM32\sechost.dll
+0x76ef0000 - 0x76f91000 	C:\Windows\system32\RPCRT4.dll
+0x76dc0000 - 0x76e89000 	C:\Windows\system32\USER32.dll
+0x76b70000 - 0x76bbe000 	C:\Windows\system32\GDI32.dll
+0x775e0000 - 0x775ea000 	C:\Windows\system32\LPK.dll
+0x75940000 - 0x759dd000 	C:\Windows\system32\USP10.dll
+0x744e0000 - 0x7467e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\COMCTL32.dll
+0x76d60000 - 0x76db7000 	C:\Windows\system32\SHLWAPI.dll
+0x77600000 - 0x7761f000 	C:\Windows\system32\IMM32.DLL
+0x76920000 - 0x769ec000 	C:\Windows\system32\MSCTF.dll
+0x70d90000 - 0x70e4d000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\msvcr100.dll
+0x56c90000 - 0x57060000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\client\jvm.dll
+0x6d770000 - 0x6d777000 	C:\Windows\system32\WSOCK32.dll
+0x76aa0000 - 0x76ad5000 	C:\Windows\system32\WS2_32.dll
+0x75b30000 - 0x75b36000 	C:\Windows\system32\NSI.dll
+0x739f0000 - 0x73a22000 	C:\Windows\system32\WINMM.dll
+0x74be0000 - 0x74be9000 	C:\Windows\system32\VERSION.dll
+0x759e0000 - 0x759e5000 	C:\Windows\system32\PSAPI.DLL
+0x6c7f0000 - 0x6c7fc000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\verify.dll
+0x65ef0000 - 0x65f12000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\java.dll
+0x70d60000 - 0x70d8b000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\jdwp.dll
+0x73610000 - 0x73617000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\npt.dll
+0x5d8c0000 - 0x5d8d4000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\zip.dll
+0x75c20000 - 0x76869000 	C:\Windows\system32\SHELL32.dll
+0x771a0000 - 0x772fc000 	C:\Windows\system32\ole32.dll
+0x755f0000 - 0x755fb000 	C:\Windows\system32\profapi.dll
+0x73600000 - 0x73608000 	C:\Program Files\Java\jdk1.8.0_161\jre\bin\dt_socket.dll
+0x73940000 - 0x73950000 	C:\Windows\system32\NLAapi.dll
+0x75030000 - 0x7506c000 	C:\Windows\System32\mswsock.dll
+0x74ef0000 - 0x74f34000 	C:\Windows\system32\DNSAPI.dll
+0x6d760000 - 0x6d768000 	C:\Windows\System32\winrnr.dll
+0x6d750000 - 0x6d760000 	C:\Windows\system32\napinsp.dll
+0x6c9b0000 - 0x6c9c2000 	C:\Windows\system32\pnrpnsp.dll
+0x747d0000 - 0x747dd000 	C:\Windows\system32\wshbth.dll
+0x70c60000 - 0x70c7c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x70c50000 - 0x70c57000 	C:\Windows\system32\WINNSI.DLL
+0x70190000 - 0x701c8000 	C:\Windows\System32\fwpuclnt.dll
+0x6d2b0000 - 0x6d2b6000 	C:\Windows\system32\rasadhlp.dll
+0x74ad0000 - 0x74ad5000 	C:\Windows\System32\wshtcpip.dll
+0x6d570000 - 0x6d65b000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:49848 -Dfile.encoding=GBK 
+java_command: cn.wlh.framework.ioc.factory.VersionFactoryTest0
+java_class_path (initial): C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\access-bridge.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\zipfs.jar;C:\Users\wlh\eclipse-workspace\ioc\target\test-classes;C:\Users\wlh\eclipse-workspace\ioc\target\classes;C:\Users\wlh\eclipse-workspace\util\util-base\target\classes;C:\Users\wlh\.m2\repository\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar;C:\Users\wlh\.m2\repository\org\apache\commons\commons-collections4\4.0\commons-collections4-4.0.jar;C:\Users\wlh\.m2\repository\org\slf4j\slf4j-log4j12\1.7.7\slf4j-log4j12-1.7.7.jar;C:\Users\wlh\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\wlh\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\wlh\.m2\repository\junit\junit\4.0\junit-4.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_161
+CLASSPATH=.
+PATH=C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/client;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/i386;C:\Program Files\Java\jdk1.8.0_161\bin;D:\maven_jdk8\apache-maven-3.5.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\\WirelessCommon\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;F:\xvxm\32\eclipse;
+USERNAME=wlh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 (6.1.7600.16481)
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, clmul, erms, lzcnt, tsc, tscinvbit
+
+Memory: 4k page, physical 3327528k(1570352k free), swap 6653296k(4717820k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.161-b12) for windows-x86 JRE (1.8.0_161-b12), built on Dec 19 2017 17:09:29 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Sep 01 16:53:06 2018
+elapsed time: 1 seconds (0d 0h 0m 1s)
+

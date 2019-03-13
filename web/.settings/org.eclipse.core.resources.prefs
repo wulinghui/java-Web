@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java=GBK
+encoding//src/main/java/cn/wlh/framework/web/WebConfig.java=GBK
+encoding//src/main/java/cn/wlh/framework/web/dao/AllDaoSuper.java=GBK
+encoding//src/main/java/cn/wlh/framework/web/factory/DaoIOCFactory.java=UTF-8
+encoding//src/test/java=GBK

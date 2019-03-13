@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <properties>
+		<cn.wlh.util.version>0.0.1-SNAPSHOT</cn.wlh.util.version>
+	</properties>
+  <groupId>com.cn.wlh.springboot.cms.super</groupId>
+  <artifactId>cms-super</artifactId>
+  <version>${cn.wlh.util.version}</version>
+  <packaging>pom</packaging>
+  <description>这里用到了第三方jar被我们内部给转换了.</description>
+  
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+	
+	<modules>
+		<module>cms-dao</module>
+		<module>cms-view-biz</module>
+	</modules>
+	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				
+				<configuration> 
+					<source>1.8</source>   
+					<target>1.8</target>
+					 <encoding>UTF-8</encoding>  
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>					
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource> 
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>					
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>

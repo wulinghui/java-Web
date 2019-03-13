@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>统一异常处理</title>
+    <link rel="stylesheet" type="text/css" href="../static/Semantic-UI/dist/semantic.min.css"/>
+<script src="../static/jquery.min.js"></script>    
+<script src="../static/Semantic-UI/dist/semantic.min.js"></script>
+<script src="../static/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<h1>Error Handler</h1>
+<div th:text="${url}"></div>    
+<div th:text="${exception.message}"></div>
+
+
+
+
+<div id="app-3">
+  <p v-if="seen">现在你看到我了</p>
+</div>
+
+<h1 class="ui center aligned header" >
+Responsive UI Examples
+</h1>
+
+
+<h2 class="ui center aligned header" onclick="alert(window.location.href)">Basic Responsive</h2>
+
+
+<h3 class="ui center aligned header">Container</h3>
+<div class="ui container">
+  <div class="ui segments">
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+  </div>
+</div>
+
+
+
+<script type="text/x-template" id="grid-template">
+      <table v-if="filteredData.length">
+        <thead>
+          <tr>
+            <th v-for="key in columns"
+              @click="sortBy(key)"
+              :class="{ active: sortKey == key }">
+              {{ key | capitalize }}
+              <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="entry in filteredData">
+            <td v-for="key in columns">
+              {{entry[key]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p v-else>No matches found.</p>
+	  
+	  
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: false
+  }
+})
+</script>
+
+ 
+
+
+
+
+
+<script src="grid.js"></script>
+</body>
+</html>

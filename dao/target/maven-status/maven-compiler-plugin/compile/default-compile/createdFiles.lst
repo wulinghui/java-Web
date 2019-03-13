@@ -1,0 +1,9 @@
+cn\wlh\framework\dao\DaoInterface.class
+cn\wlh\framework\dao\DaoInterfaceAdapt.class
+cn\wlh\framework\dao\execute\DaoInterfaceImp.class
+cn\wlh\framework\dao\DaoManageInterfaceAdapt.class
+cn\wlh\framework\dao\DaoManagerFacatory.class
+cn\wlh\framework\dao\DaoManageInterface.class
+cn\wlh\framework\dao\execute\DaoInterfaceImp2SQL.class
+cn\wlh\framework\dao\execute\AbstractDaoInterfaceImp.class
+cn\wlh\framework\dao\DaoManageImp.class

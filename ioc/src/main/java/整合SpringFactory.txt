@@ -1,0 +1,43 @@
+//package cn.wlh.framework.ioc.factory;
+//
+//import java.util.Set;
+//
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.context.ApplicationContext;
+//
+//
+//import cn.wlh.util.base.ClassUtil;
+//
+///** 整合Spring.
+// */
+//public class SpringFactory implements FactoryInterface {
+//	private  ApplicationContext ac = null;
+//	Class cla;
+//	public SpringFactory( Class cla, String []args) {
+////		SpringApplication.run(Application.class, args);
+//		this.cla = cla;
+//		SpringApplication.run( cla , args);
+//	}
+//	public SpringFactory(ApplicationContext ac) {
+//		super();
+//		this.ac = ac;
+//	}
+//
+//	public boolean isReplaceFactory() {
+//		return false;
+//	}
+//
+//	public <T> T getInstance(Class<T> key, Object[] pars) {
+//		String simpleName = key.getSimpleName();
+//		char[] charArray = simpleName.toCharArray();
+//		charArray[0] = (char) (charArray[0] - 32); // 首字母大写转小写。  
+//		String name = String.valueOf(charArray);
+//		ac.getBean( name, pars);
+//		return null;
+//	}
+//
+//	public Set<Class<?>> targerClass() {
+//		return ClassUtil.getClassSet(this.cla.getPackage().getName());
+//	}
+//
+//}

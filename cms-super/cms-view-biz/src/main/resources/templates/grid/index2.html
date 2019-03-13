@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue.js grid component example 102661300426</title>
+    <link rel="stylesheet" href="style.css">
+    
+	<link rel="stylesheet" type="text/css" href="../../static/Semantic-UI/dist/semantic.min.css"/>
+<script src="../../static/jquery.min.js"></script>    
+<script src="../../static/Semantic-UI/dist/semantic.min.js"></script>
+    <script src="../../static/vue/dist/vue.min.js"></script>
+    </head>
+  <body>
+  
+ <div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message" >
+</div> 
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">逆转消息</button>
+</div>  
+  
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+
+
+<h1 class="ui center aligned header" id="app-3">
+<p v-if="seen">zzzz   Responsive UI Examples</p>
+<div class="ui container" v-if="seen">
+  <div class="ui segments">
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+    <div class="ui segment">Content</div>
+  </div>
+</div>
+</h1>
+
+
+<h2 class="ui center aligned header" onclick="alert(window.location.href)">Basic Responsive</h2>
+
+
+<h3 class="ui center aligned header">Container</h3>
+
+
+
+   <script>
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: false
+  }
+})
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: '学习 JavaScript' },
+      { text: '学习 Vue' },
+      { text: '整个牛项目' }
+    ]
+  }
+})
+//必须在前面..
+var strReverse = function () { 
+	this.message = this.message.split('').reverse().join('');
+}
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: strReverse
+  }
+})
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+
+  </body>
+</html>

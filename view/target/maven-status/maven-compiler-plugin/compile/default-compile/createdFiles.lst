@@ -1,0 +1,4 @@
+cn\wlh\framework\view\ViewInterfaceAdapt.class
+cn\wlh\framework\view\ViewImp.class
+cn\wlh\framework\view\ViewInterface.class
+cn\wlh\framework\view\ViewFacatory.class

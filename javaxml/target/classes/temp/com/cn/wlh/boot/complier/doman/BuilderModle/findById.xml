@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<heder>
+	<script>.../.../XX.js</script><!-- 自己写的核心,数据双向绑定。 -->
+</heder>
+<body>
+	<form property="select-key" action="/txn999999">
+				
+				<hidden property="qdfs" value="0"/>
+				<hidden property="tzs_id"/>
+				<hidden property="shenqingh"/>
+				<text property="shenqingh" caption="申请号" style="width:50%" align="center"/>
+				<sql id="findById">
+					from user u,z_fa_wjsp_scztb zt where zt.id = u.uid  
+				</sql>
+				<!--这里的校验-->
+				<check>/js/check/empty.js</check>
+			
+	</form>
+	<form property="record" action="/txn999900">
+		
+				<hidden property="qdfs" value="0"/>
+				<hidden property="tzs_id"/>
+				<hidden property="shenqingh"/>
+				<text property="shenqingh" caption="申请号" style="width:50%" align="center"/>
+				<!--  这里的内容,从后端整合来的. -->
+				<sql id="findById"/>
+				<!--  这里的校验默认取global的-->
+			
+	</form>
+</body>
+</html>

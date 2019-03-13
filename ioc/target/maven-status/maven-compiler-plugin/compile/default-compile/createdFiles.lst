@@ -1,0 +1,10 @@
+cn\wlh\framework\ioc\factory\AppFactoryMan$ReturnMapKey.class
+cn\wlh\framework\ioc\factory\AppFactoryMan$FactoryMethodKey.class
+cn\wlh\framework\ioc\factory\EnumFactory.class
+cn\wlh\framework\ioc\factory\SingleFactory.class
+cn\wlh\framework\ioc\factory\SingleFactory$SingleObjectKey.class
+cn\wlh\framework\ioc\factory\VersionFactor.class
+cn\wlh\framework\ioc\factory\FactoryInterface.class
+cn\wlh\framework\ioc\factory\AppFactoryMan$FactoryMethodValue.class
+cn\wlh\framework\ioc\factory\AppFactoryMan.class
+cn\wlh\framework\ioc\factory\EnumOrNewFactor.class

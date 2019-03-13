@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.wlh</groupId>
+    <artifactId>jar</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>cn.wlh</groupId>
+  <artifactId>util</artifactId>
+  <version>${cn.wlh.util.version}</version>
+  <name>Util Of Wlh</name>      
+	<description>属于工具包</description>
+  <packaging>pom</packaging>
+  <properties>
+  		<cn.wlh.util.version>0.0.1-SNAPSHOT</cn.wlh.util.version>
+  </properties>
+  	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+	
+	
+  <modules>
+  	<module>util-base</module>
+  	<module>util-base-adapter</module>
+  	<module>util-extend</module>
+  </modules>
+</project>

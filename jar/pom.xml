@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.wlh</groupId>
+  <artifactId>jar</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>jarOfSuper</name>
+  <description>统一管理jar的父工程,该pom只管理版本号,不能直接依赖.</description>
+  
+  <properties>
+  	<junit.version>4.0</junit.version>
+  	<freemarker.version>2.3.23</freemarker.version>
+  	<dom4j.version>1.6.1</dom4j.version>
+  </properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>junit</groupId>
+  			<artifactId>junit</artifactId>      
+  			<version>${junit.version}</version>  
+  		</dependency>
+  		<dependency>
+  			<groupId>org.freemarker</groupId>
+  			<artifactId>freemarker</artifactId>      
+  			<version>${freemarker.version}</version>  
+  		</dependency>
+  		<dependency>
+    <groupId>dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>${dom4j.version}</version>
+	</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  
+ 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				
+				<configuration> 
+					<source>1.8</source>   
+					<target>1.8</target>
+					 <encoding>GBK</encoding>  
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>					
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<resource> 
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>					
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+	</build>
+ 
+
+</project>

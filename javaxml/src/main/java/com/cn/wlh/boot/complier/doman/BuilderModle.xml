@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+由于xml必须有一个根节点。我们定义根节点为父级，祖先用super代替。/路径符号用.代替。
+通过freeMaker把里面所有子节点标签名为key.text为value
+不行,多个交易的时候这样做不行
+ -->
+<one>
+	<global> <!-- 里面的属性由tag-属性  -->
+		<tab-super>这是tab标签super属性的默认内容</tab-super>	
+		<check js="/js/check/empty.js"/>
+	</global>
+	<!--  下面以父模板的名字为tab funname为对应的方法名-->
+	<findById>
+		<com.cn.util.super0.Modle>
+			<tableInner >
+				<hidden property="qdfs" value ="0"/>
+				<hidden property="tzs_id"/>
+				<hidden property="shenqingh"/>
+				<text property="shenqingh" caption="申请号" style="width:50%" align="center" />
+				<sql id="findById">
+					from user u,z_fa_wjsp_scztb zt where zt.id = u.uid  
+				</sql>
+				<!--这里的校验-->
+				<check>/js/check/empty.js</check>
+			</tableInner>
+			<__record>
+				<hidden property="qdfs" value ="0"/>
+				<hidden property="tzs_id"/>
+				<hidden property="shenqingh"/>
+				<text property="shenqingh" caption="申请号" style="width:50%" align="center" />
+				<!--  这里的内容,从后端整合来的. -->
+				<sql id="findById"/>
+				<!--  这里的校验默认取global的-->
+			</__record>
+		</com.cn.util.super0.Modle>
+	</findById>
+</one>
+
+
+<!--  这里的com.cn.wlh.boot.complier.doman.BuilderModle.xml      </findById>将生成.
+以com.cn.util.super0.Modle为父类模板.填充结果为
+
+
+<html>
+<heder>
+	<script>.../.../XX.js</script>
+</heder>
+<body>
+	<form property="select-key" action="/txn999999">
+		<hidden property="qdfs" value ="0"/>
+				<hidden property="tzs_id"/>
+				<hidden property="shenqingh"/>
+				<text property="shenqingh" caption="申请号" style="width:50%" align="center" />
+				<sql id="findById">
+					from user u,z_fa_wjsp_scztb zt where zt.id = u.uid  
+				</sql>
+				<check js="/js/check/empty.js"/>
+	</form>
+	<form property="record" action="/txn999900">
+		<hidden property="qdfs" value ="0"/>
+		<hidden property="tzs_id"/>
+		<hidden property="shenqingh"/>
+		<text property="shenqingh" caption="申请号" style="width:50%" align="center" />
+		<sql id="findById"/>
+		<check js="/js/check/empty.js"/>
+	</form>
+</body>
+</html>
+
+模板放到/Web-info/xml/com.cn.wlh.boot.complier.doman.BuilderModle.xml
+当各个浏览器过来的时候,再继续把各个子标签转化成不同的标签和把sql,校验脚本放到java里面。
+
+
+ -->
